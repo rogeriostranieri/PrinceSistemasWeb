@@ -1,0 +1,4 @@
+
+**no XX.component.ts = colocar no importes 
+"RouterLink,  // Importa a diretiva RouterLink para voltar para home" para ter rota correta
+
