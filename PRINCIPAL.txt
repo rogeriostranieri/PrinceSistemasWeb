@@ -1,5 +1,5 @@
 git add .
-git commit -m "Descreva aqui o que mudou"
+git commit -m "Iniciando o projeto"
 git push
 
 =========================
