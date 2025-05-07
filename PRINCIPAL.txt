@@ -1,3 +1,25 @@
+git add .
+git commit -m "Descreva aqui o que mudou"
+git push
+
+=========================
+
+1. Adicione as alterações:
+git add .
+
+2. Faça um commit com uma mensagem:
+git commit -m "Descreva aqui o que mudou"
+
+3. Envie para o GitHub:
+git push
+
+Sempre que alterar, repita esses três comandos.
+Assim, seu repositório remoto ficará sempre atualizado com as últimas mudanças do seu projeto!
+
+
+
+
+
 Usar o AtencaoINICIAL.txt como Base
 
 

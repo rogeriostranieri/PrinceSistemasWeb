@@ -1,36 +1,153 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+# Prince Sistemas
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+Sistema completo para gestão empresarial, desenvolvido com **Django** (backend), **PostgreSQL** (banco de dados) e **Angular 19 Standalone** (frontend).  
+O projeto é multiplataforma, responsivo, moderno e preparado para desktop, mobile e web app.
 
-   [continua todo o conteúdo padrão da licença como no seu exemplo...]
+---
 
-   END OF TERMS AND CONDITIONS
+## Principais Recursos
 
-   APPENDIX: How to apply the Apache License to your work.
+- CRUD completo para Empresas, Laudos/Alvarás, Sócios e Parcelamentos
+- Interface moderna, responsiva e minimalista
+- Menu lateral expansível e adaptativo
+- Suporte a gestos touch e navegação fluida
+- SweetAlert2 para alertas, confirmações e carregamento
+- Formulários com validação em tempo real
+- Feedback visual e animações suaves
+- Suporte a temas claros e escuros
+- Integração com APIs RESTful
+- Armazenamento local para dados offline
+- Segurança com autenticação e proteção de rotas
 
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
+---
 
-   Copyright 2025 Rogerio Stranieri
+## Tecnologias Utilizadas
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+- **Backend:** Django 4.2.5, Django Rest Framework 3.14.0, Python 3.11.4, PostgreSQL 15.4
+- **Frontend:** Angular 19 Standalone, TypeScript, SCSS, SweetAlert2
+- **Outros:** Django Filter, PWA, ambiente virtual Python
 
-       http://www.apache.org/licenses/LICENSE-2.0
+---
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+## Estrutura do Projeto
 
-Licensed under the [Apache License 2.0](LICENSE).
+```
+PrinceSistemaPY/
+├── backend/
+│   ├── apps/
+│   │   ├── login/
+│   │   ├── empresas/
+│   │   ├── parcelamentos/
+│   │   ├── laudos/
+│   │   ├── socios/
+│   │   └── ... (outros apps)
+│   ├── manage.py
+│   └── PrinceSistemas/
+│       ├── settings.py
+│       └── urls.py
+├── frontend/
+│   ├── app/
+│   │   ├── src/
+│   │   │   ├── app/
+│   │   │   │   ├── empresas/
+│   │   │   │   ├── laudos/
+│   │   │   │   ├── socios/
+│   │   │   │   ├── parcelamentos/
+│   │   │   │   ├── geral/
+│   │   │   │   ├── login/
+│   │   │   │   └── ... (outros componentes)
+│   │   │   └── styles.scss
+│   │   └── angular.json
+│   └── package.json
+├── BancoDeDados.txt
+├── PRINCIPAL.txt
+├── requeriments.txt
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Como rodar o projeto
+
+### **Backend (Django)**
+
+1. Crie e ative o ambiente virtual:
+    ```sh
+    cd PrinceSistemaPY/PrinceSistemas/backend
+    python -m venv venv
+    .\venv\Scripts\Activate.ps1
+    ```
+
+2. Instale as dependências:
+    ```sh
+    pip install -r requeriments.txt
+    ```
+
+3. Configure o banco de dados PostgreSQL conforme o exemplo em `PRINCIPAL.txt` e `BancoDeDados.txt`.
+
+4. Execute as migrações:
+    ```sh
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py check
+    ```
+
+5. Inicie o servidor:
+    ```sh
+    python manage.py runserver
+    ```
+
+---
+
+### **Frontend (Angular)**
+
+1. Instale as dependências:
+    ```sh
+    cd PrinceSistemaPY/PrinceSistemas/frontend/app
+    npm install
+    ```
+
+2. Inicie o servidor de desenvolvimento:
+    ```sh
+    ng serve
+    ```
+
+3. Acesse em [http://localhost:4200](http://localhost:4200)
+
+---
+
+## Banco de Dados
+
+- **Banco:** PostgreSQL
+- **Nome:** PrinceDB
+- **Tabelas:** Empresas, Laudos, Sócios, Parcelamentos
+- **Exemplo de conexão:**  
+  Veja detalhes e exemplos de queries em `BancoDeDados.txt`.
+
+---
+
+## Comandos úteis
+
+- **Atualizar o repositório no GitHub:**
+    ```sh
+    git add .
+    git commit -m "Descreva aqui o que mudou"
+    git push
+    ```
+
+- **Instalar SweetAlert2 no frontend:**
+    ```sh
+    npm install sweetalert2
+    ```
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [Apache License 2.0](LICENSE).
+
+---
+
+**Desenvolvido por Rogerio Stranieri – 2025**
+Este projeto está licenciado sob a [Apache License 2.0](LICENSE).
