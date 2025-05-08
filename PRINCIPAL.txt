@@ -80,25 +80,6 @@ cd D:\0000000000000000000000000\PrinceSistemaPY\PRINCESISTEMAS\backend
 =====================================================================================
   
         
-***********
-backend=
-.\venv\Scripts\Activate.ps1
-python manage.py makemigrations
-python manage.py migrate
-python manage.py check
-
-python manage.py runserver
-
-frontend = 
-ng build
-ng serve
-
-**********
-
-python manage.py runserver
-ng serve
-***********************
-
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\backend
 .\venv\Scripts\Activate.ps1
 python manage.py makemigrations
