@@ -92,6 +92,13 @@ ng serve
 
 ng build
 
+
+git add .
+git commit -m "Atualizando o projeto 08/05/2025"
+git push
+
+
+
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\backend
 python manage.py runserver
 
