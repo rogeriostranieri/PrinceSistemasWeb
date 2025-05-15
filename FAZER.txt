@@ -1,0 +1,80 @@
+Ótimo, vamos resolver isso passo a passo.
+
+---
+
+## ✅ RESUMO DO CENÁRIO
+
+* Seu campo `avisarempresa` está salvo no banco como `CharField`, com valores como `"Sim"` ou `"Não"`.
+* No frontend (Angular), você **muda para "Sim"/"Não"**, mas **o valor não está sendo salvo no banco**.
+* Já ajustamos o backend para interpretar corretamente `"Sim"` e `"Não"`.
+
+---
+
+## ✅ CAUSA MAIS PROVÁVEL
+
+O **campo `avisarempresa` no seu HTML/TS** está ligado diretamente ao valor booleano (ex: `true/false`), mas o `PATCH` ou `PUT` está enviando booleano para o Django, **e ele espera string**, mesmo com o tratamento no serializer.
+
+---
+
+## ✅ SOLUÇÃO
+
+### 1. **Garanta que no Angular você envie `avisarempresa: 'Sim'` ou `'Não'` (string), não `true/false`**
+
+#### Exemplo 1 — em `home.component.ts` ou `empresas.component.ts`
+
+```ts
+empresa.avisarempresa = empresa.avisarempresa === true || empresa.avisarempresa === 'Sim' ? 'Sim' : 'Não';
+```
+
+Faça isso **antes de enviar para o backend**.
+
+---
+
+#### Exemplo 2 — ao enviar via `PUT` ou `PATCH`
+
+```ts
+this.http.put(`/api/empresas/${empresa.id_empresas}/`, {
+  ...empresa,
+  avisarempresa: empresa.avisarempresa === true || empresa.avisarempresa === 'Sim' ? 'Sim' : 'Não'
+}).subscribe(...)
+```
+
+---
+
+### 2. **Ou, use dropdown no HTML com valores fixos "Sim"/"Não"**
+
+#### HTML (`empresa.component.html`):
+
+```html
+<label for="avisarempresa">Avisar Empresa:</label>
+<select [(ngModel)]="empresa.avisarempresa" id="avisarempresa" class="form-control">
+  <option [ngValue]="'Sim'">Sim</option>
+  <option [ngValue]="'Não'">Não</option>
+</select>
+```
+
+Assim o Angular já envia `"Sim"` ou `"Não"` como string.
+
+---
+
+## ✅ EXTRA: se estiver usando checkbox
+
+Se estiver usando `mat-checkbox`, por exemplo:
+
+```html
+<mat-checkbox [(ngModel)]="empresa.avisarempresa">Avisar Empresa</mat-checkbox>
+```
+
+Aí o `empresa.avisarempresa` será booleano. Então, **no envio para o backend**, converta:
+
+```ts
+empresa.avisarempresa = empresa.avisarempresa ? 'Sim' : 'Não';
+```
+
+---
+
+## ✅ Confirme que o backend está aceitando
+
+Já validamos que no `serializers.py` você trata `avisarempresa` com `validate_avisarempresa()` e `to_internal_value()`.
+
+Se você quiser, posso revisar a função de salvar/editar empresa no seu `.ts` e `.html` para garantir que está tudo certo. Deseja colar esses trechos aqui para revisar?
