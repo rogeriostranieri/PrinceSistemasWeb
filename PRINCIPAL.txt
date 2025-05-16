@@ -67,7 +67,7 @@ FROM
     information_schema.columns 
 WHERE 
     table_schema = 'public' 
-    AND table_name = 'Parcelamentos';
+    AND table_name = 'CNAE';
 
 
 
@@ -88,9 +88,13 @@ python manage.py check
 python manage.py runserver
 
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app
-ng serve
+ng serve --configuration=production
+
 
 ng build
+ng build --configuration=production
+ng serve
+
 
 
 GIT GitHub
