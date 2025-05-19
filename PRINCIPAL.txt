@@ -99,6 +99,7 @@ ng serve
 
 GIT GitHub
 usar  ======
+cd D:\0000000000000000000000000\PrinceSistemaPY
 .\git-diario.ps1
 
 ou usar isso ===
@@ -108,6 +109,8 @@ git status
 git pull
 git add .
 git commit -m "Mensagem do dia - 13/05/2025"
+
+git add .
 git push
 
 
