@@ -108,7 +108,7 @@ cd D:\0000000000000000000000000\PrinceSistemaPY
 git status
 git pull
 git add .
-git commit -m "Mensagem do dia - 13/05/2025"
+git commit -m "Mensagem do dia - 23/05/2025 atualizacao geral"
 
 git add .
 git push
