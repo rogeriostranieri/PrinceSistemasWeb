@@ -67,7 +67,7 @@ FROM
     information_schema.columns 
 WHERE 
     table_schema = 'public' 
-    AND table_name = 'CNAE';
+    AND table_name = 'Contador';
 
 
 
