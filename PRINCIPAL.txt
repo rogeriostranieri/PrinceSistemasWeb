@@ -98,10 +98,12 @@ USAR - weasyprint para gerar PDF backend
 
 ng build
 ng build --configuration=production
-
+------------------------------------------------------
+cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\backend
+python manage.py runserver
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app
 ng serve
-
+-------------------------------------------------------
 
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app
 ng generate component empresas/eventosempresa --standalone
@@ -116,14 +118,14 @@ ou usar isso ===
 
 cd D:\0000000000000000000000000\PrinceSistemaPY
 git status
-git pull
 git add .
 git commit -m "Mensagem do dia - 23/05/2025 atualizacao geral"
-
 git add .
 git push
 
-
+Situação	                        Comando
+Baixar alterações do servidor	    git pull
+Subir alterações para o servidor	git push
 
 
 
