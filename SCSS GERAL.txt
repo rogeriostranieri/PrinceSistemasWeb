@@ -1,0 +1,96 @@
+Prince Design System - Guia de Referência Rápida
+
+****Configuração em Novos Projetos
+scss padronizado = src/assets/scss/prince-design.scss 
+
+****ja esta configurado no angular.json: "styles": [
+              "src/styles.scss",
+              "src/assets/scss/prince-design.scss"
+                ],
+
+***** usar exemplo: @import 'src/assets/scss/prince-design.scss';
+
+
+
+****Classes Disponíveis por Categoria do prince-design.scss:
+Layout
+container - Container principal com largura máxima de 1280px
+flex-row - Flexbox horizontal com itens centralizados
+flex-col - Flexbox vertical com espaçamento padrão
+flex-center - Centraliza conteúdo horizontal e verticalmente
+flex-between - Distribui itens com espaço entre eles
+grid-cols-2 - Grid de 2 colunas (responsivo)
+grid-cols-3 - Grid de 3 colunas (responsivo)
+Cartões
+card - Card básico com sombra e borda
+glass-card - Card com efeito de vidro e blur
+gradient-border - Borda com gradiente colorido
+Botões
+button - Botão principal com gradiente azul
+button secondary - Botão com estilo secundário
+button success - Botão verde para ações positivas
+button danger - Botão vermelho para ações críticas
+button loading - Botão com indicador de carregamento
+Tipografia
+heading-1 - Título principal grande
+heading-2 - Subtítulo médio
+heading-3 - Subtítulo pequeno
+body-text - Texto do corpo
+text-3d - Texto com efeito 3D
+Cores
+text-primary - Texto na cor primária
+text-secondary - Texto na cor secundária
+text-success - Texto verde
+text-danger - Texto vermelho
+text-white - Texto branco
+Efeitos
+shine-effect - Efeito de brilho no hover
+fade-in - Animação de entrada com fade
+stagger-item - Item com entrada sequencial
+pulse-element - Elemento com pulsação contínua
+Espaçamento
+mt-sm, mt-md, mt-lg - Margin top (pequena, média, grande)
+mb-sm, mb-md, mb-lg - Margin bottom
+p-sm, p-md, p-lg - Padding
+mx-auto - Centralização horizontal automática
+Bordas
+rounded-sm - Borda arredondada pequena (6px)
+rounded-md - Borda arredondada média (10px)
+rounded-lg - Borda arredondada grande (14px)
+rounded-full - Borda circular completa
+Sombras
+shadow-sm - Sombra sutil
+shadow-md - Sombra média
+shadow-lg - Sombra pronunciada
+shadow-xl - Sombra grande para destaque
+
+
+
+****Exemplo de Uso:
+<div class="container">
+  <div class="card glass-card mb-lg">
+    <h2 class="heading-2 mb-md">Título do Card</h2>
+    
+    <div class="flex-between">
+      <span class="badge success">Ativo</span>
+      <button class="button shine-effect">Salvar</button>
+    </div>
+  </div>
+  
+  <div class="grid-cols-2">
+    <div class="card">Conteúdo 1</div>
+    <div class="card">Conteúdo 2</div>
+  </div>
+</div>
+
+
+****Variáveis CSS Disponíveis
+Use em seus estilos personalizados com var(--nome-da-variavel)
+
+--color-primary-dark - Azul escuro
+--color-primary-light - Azul claro
+--gradient-primary - Gradiente principal
+--spacing-md - Espaçamento médio
+--border-radius-lg - Raio de borda grande
+
+Para documentação completa, consulte o arquivo prince-design.scss

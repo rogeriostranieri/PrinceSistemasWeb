@@ -103,14 +103,19 @@ cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\backend
 python manage.py runserver
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app
 ng serve
+
+PROCURAR ERROS
+
+CD D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app\src\app
+npx eslint . --ext .ts --fix
+
 -------------------------------------------------------
 
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app
 ng generate component empresas/eventosempresa --standalone
 
 
-GIT GitHub
-usar  ======
+GIT GitHub  usar  ======
 cd D:\0000000000000000000000000\PrinceSistemaPY
 .\git-diario.ps1
 
