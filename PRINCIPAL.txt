@@ -79,7 +79,7 @@ cd D:\0000000000000000000000000\PrinceSistemaPY\PRINCESISTEMAS\backend
 .\venv\Scripts\Activate.ps1
 =====================================================================================
   
-        
+backend
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\backend
 .\venv\Scripts\Activate.ps1
 python manage.py makemigrations
@@ -87,9 +87,17 @@ python manage.py migrate
 python manage.py check
 python manage.py runserver
 
+
+frontend = 
 cd D:\0000000000000000000000000\PrinceSistemaPY\princesistemas\frontend\app
 ng serve --configuration=production
+=====================================================================================
+# INICIAR O PROJETO
 
+GITBASh -
+
+
+=====================================================================================
 
 USAR - material-icons para icones 
 USAR - docxtpl para documentos WORD backend
