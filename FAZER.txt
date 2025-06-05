@@ -1,2 +1,0 @@
-SELECT "ID_Anotacoes", "Usuario", "Federal", "Estadual", "Municipal", "Inicial", "Demais", "Legalizacao", "Anexos", "Anexo1", "Anexo2", "Anexo3", "Anexo4", "Anexo5"
-	FROM public."Anotacoes";
